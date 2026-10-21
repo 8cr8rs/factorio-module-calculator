@@ -1,0 +1,22 @@
+{
+  "name": "module-calculator",
+  "version": "0.1.0",
+  "title": "Module Calculator",
+  "description": "Evaluates what combinations of modules can be used to achieve a target percentage buff.",
+  "author": "eightcraters",
+  "contact": "eightcraters@hotmail.com",
+  "homepage": "https://example.com",
+  "factorio_version": "2.0",
+  "dependencies": [
+    "base >= 2.0",
+    "? quality"
+  ],
+  "expansion_required": false,
+  "expansion_shaders_required": false,
+  "freezing_required": false,
+  "quality_required": false,
+  "rail_bridges_required": false,
+  "segmented_units_required": false,
+  "space_travel_required": false,
+  "spoiling_required": false
+}
