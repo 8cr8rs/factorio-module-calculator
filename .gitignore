@@ -1,0 +1,7 @@
+# Compiled mod
+*.zip
+
+# Type definitions
+types/
+typings/
+definitions/

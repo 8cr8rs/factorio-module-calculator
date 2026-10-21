@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+# core
+*.lua diff=lua
+*.json diff=json
+*.sh eol=lf
+
+# doc
+*.md text
+*.txt text
+
+# image
+*.png binary
