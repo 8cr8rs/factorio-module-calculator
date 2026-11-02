@@ -5,6 +5,7 @@ local floor = math.floor
 local sqrt = math.sqrt
 
 --- @param x number[]
+--- @return number total
 local function sum(x)
   local total = 0
   for _, v in ipairs(x) do
@@ -55,12 +56,17 @@ function calculator.get_raw_residual_from_total(total, n, target)
 end
 
 
---- Raw residual refers to the residual boost that represents the sum of the
---- remaining modules multiplied by their beacons' respective distribution
---- efficiencies. This is NOT the number that the module percentages should add
---- up to.
---- If a base effect needs to be added, add it directly to target
---- @param beacons BeaconData[]
+-- Raw residual refers to the residual boost that represents the sum of the
+-- remaining modules multiplied by their beacons' respective distribution
+-- efficiencies. This is NOT the number that the module percentages should add
+-- up to. You should divide the raw residual by a distribution efficiency first
+-- to obtain the actual module value required.
+
+-- If a base effect from the machine or its internal modules exists, add it directly
+-- to target.
+
+--- @param beacons BeaconData[] An array of all the beacons. Include empty
+--- beacons in which modules will be inserted
 --- @param target number The target percentage
 --- @return number raw_residual
 function calculator.get_raw_residual_from_beacons(beacons, target)
